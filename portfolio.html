@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="icons">
+        <div class="circle"><p>f</p></div>
+        <div class="circle"><p>tw</p></div>
+        <div class="circle"><p>g<sub>+</sub></p></div>
+        <div class="circle"><p>in</p></div>
+        <div class="circle"><p style="font-size:15px;">Tube</p></div>
+        <div id="phone">
+            <div><i class="fa-solid fa-phone-flip" style="color: #27dd33;"></i> 
+            <span style="color: white;">+92 (304)386-6719</span>
+            <div><i class="fa-solid fa-phone-flip" style="color: #27dd33;"></i> 
+            <span style="color: white;">+92 (317)011-3001</span>
+            <button style="background-color: #27dd33;">Call Me Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="nav-img">
+        <img src="LOGO (1).jpg">
+        <nav>
+            <a href="home.html">Why Us</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="process.html">Process</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="skills.html">Our Skills</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
+    <div id="banners">
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.jpg">
+    </div>
+    <div id="p1">
+        <div id="about1">
+            <span style="color: #ffffff;">OUR</span>
+            <span style="color: #0d9e16;">PORTFOLIO</span>
+        </div>
+<div class="t1">
+    <center>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iure provident ratione voluptatem Impedit laboriosam <br>beatae, corrupti saepe praesentium dolore odio. Lorem ipsum dolor sit amet.</center>
+</div>
+
+<nav class="p2-nav">
+    <ul>
+        <li><a href="3.png" data-image="3.png" class="active">WEB DESIGN</a></li>
+        <li><a href="4.png" data-image="4.png">GRAPHIC DESIGN</a></li>
+        <li><a href="5.png" data-image="5.png">BRANDING</a></li>
+        <li><a href="6.png" data-image="6.png">LOGO</a></li>
+        <li><a href="7.png" data-image="7.png">MARKETING</a></li>
+        <li><a href="8.png" data-image="8.png">ADVERTISEMENT</a></li>
+    </ul>
+</nav>
+
+<div id="image-box" class="image-box">
+    <img src="6.png" id="displayed-image" style="display:block;">
+</div>
+
+<hr>
+    <footer>
+        <div id="footer-image">
+            <img src="LOGO for footer self.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur, ab eum molestiae atque commodi amet quos maiores accusantium sapiente, corporis deleniti odio nostrum architecto, rem odit nobis eveniet.</p>
+            <h6 class="p1">@ Panacloud <b>2019</b></h6>
+        </div>
+        <div>
+            <ul>
+            <li class="let">SERVICES</li>
+            <li class="ul-li">Lorem, ipsum dolor.</li>
+            <li class="ul-li">Lorem, ipsum.</li>
+            <li class="ul-li">Lorem, ipsum dolor.</li>
+            <li class="ul-li">Lorem, ipsum.</li>
+            <li class="ul-li">Lorem, ipsum.</li>
+            <li class="ul-li">Lorem, ipsum dolor.</li>
+            <li class="ul-li">Lorem, ipsum.</li>
+            </ul>
+        </div>
+        <hr class="custom-hr">
+        <div>
+            <ul>
+                <li class="let">USEFUL LINKS</li>
+                <li class="ul-li">Lorem, ipsum dolor.</li>
+                <li class="ul-li">Lorem, ipsum.</li>
+                <li class="ul-li">Lorem, ipsum dolor.</li>
+                <li class="ul-li">Lorem, ipsum.</li>
+                <li class="ul-li">Lorem, ipsum.</li>
+                <li class="ul-li">Lorem, ipsum dolor.</li>
+                <li class="ul-li">Lorem, ipsum.</li>
+            </ul>
+        </div>
+        <hr class="custom-hr">
+        <div>
+            <ul>
+            <li class="let size">CONTACT US</li>
+            <div class="phone">
+            <li><i class="fa-solid fa-phone-flip" style="color: #ffffff;">    <span style="color: white;">+92 (304)386-6719</span></i></li>
+            <li><i class="fa-solid fa-phone-flip" style="color: #ffffff;">    <span style="color: white;">+92 (317)011-3001</span></i></li>
+            <li><i class="fa-solid fa-envelope" style="color: #ffffff;">      <span style="color: white;">info@website.com</span></i></li>
+            </ul>
+            <div>
+                <span id="follow">FOLLOW US</span>
+                <div class="icons">
+                    <div class="circle color"><p>f</p></div>
+                    <div class="circle color"><p>tw</p></div>
+                    <div class="circle color"><p>g<sub>+</sub></p></div>
+                    <div class="circle color"><p>in</p></div>
+                    <div class="circle color"><p style="font-size:15px;">Tube</p></div>
+            </div> 
+        </div> 
+        </div>
+    
+    </footer>
+</body>
+
+    <script>
+        const images = document.querySelectorAll('#banners img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            images[currentIndex].classList.add('exit');
+            currentIndex = (currentIndex + 1) % images.length;
+            setTimeout(() => {
+                images[currentIndex].classList.remove('exit'); 
+                images[currentIndex].classList.add('active'); 
+            }, 1000);
+        }
+        images[currentIndex].classList.add('active');
+        setInterval(showNextImage, 3000);
+
+        document.querySelectorAll('.p2-nav ul li a').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        const imageSrc = this.getAttribute('data-image'); 
+        const imgElement = document.getElementById('displayed-image');
+
+        
+        imgElement.src = imageSrc;
+        imgElement.style.display = 'block';
+    });
+});
+
+    </script>

@@ -1,0 +1,96 @@
+.skills-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+.section-title h2 span {
+    color: #8cc63f;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    position: relative;
+    width: 150px;
+}
+
+.skill-circle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.skill-circle svg {
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+}
+
+
+.skill-circle circle:not(.progress) {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 8;
+}
+
+
+.skill-circle circle.progress {
+    fill: none;
+    stroke-width: 12;
+    stroke-linecap:round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: stroke 1s ease-in-out;
+}
+
+
+circle.seo-progress {
+    stroke: #ffc107 !important;  
+}
+
+circle.branding-progress {
+    stroke: #ff5252 !important;  
+}
+
+circle.web-design-progress {
+    stroke: #8cc63f !important;  
+}
+
+circle.marketing-progress {
+    stroke: #333333 !important;  
+}
+
+.skill-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
